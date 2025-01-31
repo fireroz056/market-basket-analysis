@@ -38,3 +38,4 @@ print(rules.head(10))  # Show top 10 recommendations
 
 # Save results for reference
 rules.to_csv("optimized_recommendations.csv", index=False)
+
