@@ -32,9 +32,9 @@ rules["Weighted_Score"] = (
 # Sort rules by Weighted Score for best upsell recommendations
 rules = rules.sort_values(by="Weighted_Score", ascending=False)
 
-# Display top recommendations
-import ace_tools as tools
-tools.display_dataframe_to_user(name="Optimized Market Basket Recommendations", dataframe=rules)
+# Print the top recommendations instead of using ace_tools
+print("Top Market Basket Recommendations:")
+print(rules.head(10))  # Show top 10 recommendations
 
 # Save results for reference
 rules.to_csv("optimized_recommendations.csv", index=False)
